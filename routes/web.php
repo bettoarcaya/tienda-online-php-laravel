@@ -15,4 +15,12 @@ Route::get('/','MainController@home');
 
 Auth::routes();
 
+Route::resource('productos','ProductsController');
+/*el primer parametro define el recurso con el
+que trabajariamos en este caso la tabla de productos
+y debajo colocamos todas las rutas de las acciones
+vinculadas al recurso*/
+
+
+
 Route::get('/home', 'HomeController@index');
