@@ -167,7 +167,12 @@ return [
          * Package Service Providers...
          */
 
-        //
+        //agregados..
+        Barryvdh\Debugbar\ServiceProvider::class,
+         Collective\Html\HtmlServiceProvider::class,
+         //Cviebrock\EloquentSluggable\ServiceProvider::class,
+         Unisharp\Ckeditor\ServiceProvider::class,
+         Laracasts\Flash\FlashServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -225,6 +230,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        //agregados...
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 
