@@ -29,6 +29,12 @@
         @endforeach
       </tbody>
     </table>
+    <div class="text-right">
+      <a class="btn btn-primary btn-fab" href="{{url('/create')}}">
+        <i class="material-icons">+</i>
+      </a>
+    </div>
+
   </div>
 
 

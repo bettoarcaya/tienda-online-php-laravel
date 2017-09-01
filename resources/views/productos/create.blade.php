@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends("layouts.app")
 
 
-@section('content')
+@section("content")
 
   <div class="container text-center">
     <h1>Nuevo Producto</h1>
@@ -25,12 +25,13 @@
     </div>
 
     <div class="form-group text-right">
-      <a href="{{url('/productos')}}" class="btn btn-danger"> Regresar</a>
-      <input type="submit" name="" value="Enviar" class="btn btn-success">
+      <a href="{{url('/productos')}}" class="btn btn-raised btn-danger"> Regresar</a>
+      <input type="submit" name="" value="Enviar" class="btn btn-raised btn-success">
     </div>
 
     {!! Form::close() !!}
 
   </div>
+
 
 @endsection

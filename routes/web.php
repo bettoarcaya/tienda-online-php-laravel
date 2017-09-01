@@ -21,6 +21,8 @@ que trabajariamos en este caso la tabla de productos
 y debajo colocamos todas las rutas de las acciones
 vinculadas al recurso*/
 
+Route::get('/create','ProductsController@create');
+
 
 
 Route::get('/home', 'HomeController@index');
