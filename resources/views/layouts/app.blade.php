@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-material-design.min.css">
     <link rel="stylesheet" href="css/ripples.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
 
 
 

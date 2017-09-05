@@ -3,7 +3,7 @@
 
 @section("content")
 
-  <div class="container text-center">
+  <div class="container text-center formu">
     <h1>Nuevo Producto</h1>
     <!-- formulario -->
 
@@ -15,7 +15,7 @@
     </div>
 
     <div class="form-group">
-      {{ Form::number('Pricing','',['class' => 'form-control', 'placeholder' => 'Prcio Del Producto En $'])}}
+      {{ Form::number('pricing','',['class' => 'form-control', 'placeholder' => 'Prcio Del Producto En $'])}}
 
     </div>
 

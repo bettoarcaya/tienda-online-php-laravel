@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Producto;
+
+use Illuminate\Support\Facades\Auth;
+
 class ProductsController extends Controller
 {
     /**
@@ -37,9 +40,20 @@ class ProductsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request){
+      //guardamos el producto obteniendo datos desde el formulario
+      $produc = new Producto;
+
+      $produc->title = $request->title;
+      $produc->description = $request->description;
+      $produc->precio = $request->pricing;
+      $produc->user_id = Auth::user()->id;
+
+      if($produc->save()){
+        return redirect("/productos");
+      }
+
+      return view("/create");
     }
 
     /**

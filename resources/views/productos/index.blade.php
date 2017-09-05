@@ -6,7 +6,7 @@
     <h1>Productos</h1>
   </div>
 
-  <div class="container">
+  <div class="container proTable">
     <table class="table table-bordered">
       <thead>
         <tr>
