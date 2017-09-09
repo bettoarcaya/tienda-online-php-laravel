@@ -25,7 +25,7 @@
             <td>{{$element->description}}</td>
             <td>{{$element->precio}}</td>
             <td>
-              <a href="{{url('/editar', $element->id)}}">
+              <a href="{{url('productos/editar', $element->id)}}">
                 Editar
               </a>
             </td>
@@ -34,7 +34,7 @@
       </tbody>
     </table>
     <div class="text-right">
-      <a class="btn btn-primary btn-fab" href="{{url('/create')}}">
+      <a class="btn btn-primary btn-fab" href="{{url('productos/create')}}">
         <i class="material-icons">+</i>
       </a>
     </div>
