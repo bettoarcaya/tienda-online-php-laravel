@@ -24,7 +24,11 @@
             <td>{{$element->title}}</td>
             <td>{{$element->description}}</td>
             <td>{{$element->precio}}</td>
-            <!--<td>{{$element->acciones}}</td>-->
+            <td>
+              <a href="{{url('/editar', $element->id)}}">
+                Editar
+              </a>
+            </td>
           </tr>
         @endforeach
       </tbody>

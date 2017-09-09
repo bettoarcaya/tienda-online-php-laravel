@@ -30,8 +30,8 @@ class ProductsController extends Controller
      */
     public function create(){
 
-
-      return view('productos.create');
+      $produc = new Producto;
+      return view('productos.create', ["producto" => $produc]);
     }
 
     /**
@@ -73,9 +73,15 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id){
         //
+        $produc = Producto::find($id);
+      return view('productos.editar')->with("producto", $produc);
+    }
+
+    public function editar(){
+      # code...
+      return view('editar');
     }
 
     /**
@@ -85,8 +91,7 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id){
         //
     }
 
