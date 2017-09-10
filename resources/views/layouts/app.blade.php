@@ -11,11 +11,11 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-material-design.min.css">
-    <link rel="stylesheet" href="css/ripples.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="/css/ripples.min.css">
+    <link rel="stylesheet" href="/css/main.css">
 
 
 
@@ -89,11 +89,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/app.js"></script>
-    <script src="js/jquery-2.1.1.js" type="text/javascript"></script>
-    <script src="js/bootstrap.js" type="text/javascript"></script>
-    <script src="js/material.min.js" type="text/javascript"></script>
-    <script src="js/ripples.min.js" type="text/javascript"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/jquery-2.1.1.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.js" type="text/javascript"></script>
+    <script src="/js/material.min.js" type="text/javascript"></script>
+    <script src="/js/ripples.min.js" type="text/javascript"></script>
     <script>
       $.material.init();
     </script>
