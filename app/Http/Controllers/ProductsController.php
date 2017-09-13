@@ -76,12 +76,7 @@ class ProductsController extends Controller
     public function edit($id){
         //
         $produc = Producto::find($id);
-      return view('productos.editar')->with("producto", $produc);
-    }
-
-    public function editar(){
-      # code...
-      return view('editar');
+      return view('productos/editar')->with("producto", $produc);
     }
 
     /**
@@ -93,6 +88,17 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id){
         //
+        $produc = Producto::find($id);
+
+        $produc->title = $request->title;
+        $produc->description = $request->description;
+        $produc->precio = $request->pricing;
+
+        if($produc->save()){
+          return redirect()->route('productos');
+        }
+
+        return redirect()->route('productos');
     }
 
     /**

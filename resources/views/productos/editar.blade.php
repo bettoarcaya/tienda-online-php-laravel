@@ -5,8 +5,8 @@
 <div class="container text-center formu">
   <h1>Editar Producto</h1>
 <!-- formulario -->
-
-  <!-- @include("productos.formulario",['url' => 'productos/editar/'.$producto->id, 'method' => 'PATCH'])-->
+<!--
+   @include("productos.formulario",['url' => '/productos', 'method' => 'PATCH'])-->
 
   {!! Form::open(['action' => ['ProductsController@update', $producto->id], 'enctype' => 'multipart/form-data' ,'method' => 'PATCH','class' => 'form-horizontal']) !!}
 
@@ -27,11 +27,12 @@
 
   <div class="form-group text-right">
     <a href="{{url('/productos')}}" class="btn btn-raised btn-danger"> Regresar</a>
-    <input type="submit" name="" value="Enviar" class="btn btn-raised btn-success">
+    <input type="submit" name="Actualizar" value="Enviar" class="btn btn-raised btn-success">
   </div>
 
 
   {!! Form::close() !!}
+
 
 </div>
 
