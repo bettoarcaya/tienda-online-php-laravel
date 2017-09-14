@@ -12,6 +12,7 @@
 */
 
 Route::get('/','MainController@home');
+Route::resource('/show', 'ProductsController@show');
 
 Route::group(['prefix' => 'productos' , 'middleware' => 'auth'], function(){
 
