@@ -18,9 +18,11 @@ Route::group(['prefix' => 'productos' , 'middleware' => 'auth'], function(){
   Route::resource('/','ProductsController');
   Route::resource('/editar','ProductsController@edit');
   Route::resource('/create','ProductsController@create');
+  Route::resource('/eliminar','ProductsController@delete');
 
 
-  Route::resource('Producto','ProductsController', ['only' => ['edit','update','show','index','create']]);
+
+  Route::resource('Producto','ProductsController', ['only' => ['edit','update','show','index','create','delete','destroy']]);
 
 
 

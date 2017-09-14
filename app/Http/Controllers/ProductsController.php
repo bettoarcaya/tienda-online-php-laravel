@@ -76,7 +76,7 @@ class ProductsController extends Controller
     public function edit($id){
         //
         $produc = Producto::find($id);
-      return view('productos/editar')->with("producto", $produc);
+      return view('productos.editar')->with("producto", $produc);
     }
 
     /**
@@ -107,8 +107,17 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function delete($id){
+       //
+       $product = Producto::find($id);
+
+      return view('productos.eliminar')->with('producto', $product);
+    }
+    public function destroy($id){
         //
+        $product = Producto::find($id);
+        $product->delete();
+
+      return redirect('/productos');
     }
 }

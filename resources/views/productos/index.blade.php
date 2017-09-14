@@ -28,6 +28,9 @@
               <a href="{{url('productos/editar', $element->id)}}">
                 Editar
               </a>
+              <a href="{{url('productos/eliminar', $element->id)}}">
+                Eliminar
+              </a>
             </td>
           </tr>
         @endforeach
