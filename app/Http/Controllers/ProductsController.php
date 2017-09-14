@@ -53,7 +53,7 @@ class ProductsController extends Controller
         return redirect("/productos");
       }
 
-      return view("/create");
+      return view("productos.create");
     }
 
     /**
@@ -95,10 +95,10 @@ class ProductsController extends Controller
         $produc->precio = $request->pricing;
 
         if($produc->save()){
-          return redirect()->route('productos');
+          return redirect('/productos');
         }
 
-        return redirect()->route('productos');
+        return view('productos.editar')->with("producto", $produc);
     }
 
     /**

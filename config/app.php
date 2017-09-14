@@ -169,10 +169,10 @@ return [
 
         //agregados..
         Barryvdh\Debugbar\ServiceProvider::class,
-         Collective\Html\HtmlServiceProvider::class,
-         //Cviebrock\EloquentSluggable\ServiceProvider::class,
-         Unisharp\Ckeditor\ServiceProvider::class,
-         Laracasts\Flash\FlashServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Unisharp\Ckeditor\ServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
         /*
          * Application Service Providers...

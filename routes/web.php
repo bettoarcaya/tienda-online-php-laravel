@@ -12,13 +12,19 @@
 */
 
 Route::get('/','MainController@home');
-Auth::routes();
 
 Route::group(['prefix' => 'productos' , 'middleware' => 'auth'], function(){
 
   Route::resource('/','ProductsController');
   Route::resource('/editar','ProductsController@edit');
   Route::resource('/create','ProductsController@create');
+
+
+  Route::resource('Producto','ProductsController', ['only' => ['edit','update','show','index','create']]);
+
+
+
 });
 
 Route::get('/home', 'HomeController@index');
+Auth::routes();
