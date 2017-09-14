@@ -18,14 +18,14 @@
 
     public function home(){
       # code...
-      return view('main.home');
+        $prod = Producto::all();
+        
+      return view('main.home')->with('productos', $prod);
     }
 
     public function editar(){
       # code...
-        $p = Producto::find(3);
 
-      return view('productos.editar')->with('producto', $p);
     }
 
 

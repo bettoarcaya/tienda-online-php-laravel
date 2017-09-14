@@ -23,9 +23,6 @@ Route::group(['prefix' => 'productos' , 'middleware' => 'auth'], function(){
 
 
   Route::resource('Producto','ProductsController', ['only' => ['edit','update','show','index','create','delete','destroy']]);
-
-
-
 });
 
 Route::get('/home', 'HomeController@index');
