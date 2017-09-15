@@ -15,6 +15,9 @@ class CreateShoppinCartsTable extends Migration
     {
         Schema::create('shoppin_carts', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->string('status');
+
             $table->timestamps();
         });
     }
