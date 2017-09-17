@@ -11,8 +11,7 @@ class CreateShoppinCartsTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+    public function up(){
         Schema::create('shoppin_carts', function (Blueprint $table) {
             $table->increments('id');
 
@@ -27,8 +26,7 @@ class CreateShoppinCartsTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down(){
         Schema::dropIfExists('shoppin_carts');
     }
 }
