@@ -59,7 +59,8 @@
 
                           <li>
                             <a href="#">
-                              carrito
+                              
+                              <i class="glyphicon glyphicon-shopping-cart"></i>
                               <span>
                                 {{$carrito->productSize()}}
                               </span>
