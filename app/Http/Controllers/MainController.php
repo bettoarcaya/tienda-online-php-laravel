@@ -9,7 +9,7 @@
 
   use App\Producto;
 
-  use app\ShoppinCart;
+  use App\ShoppinCart;
 
 
 
@@ -21,7 +21,7 @@
     public function home(){
       # code...
         $prod = Producto::all();
-        
+
         $idCarrito = \Session::get('idCarrito');
         $carrito = ShoppinCart::encontrarOCrearId($idCarrito);
         \Session::put('idCarrito', $carrito->id);

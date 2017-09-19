@@ -17,10 +17,10 @@ class ShoppinCart extends Model{
 
     //si $shoppinC_id no es null retornar el carrito con el id
     if ($shoppingC_id) {
-      return $ShoppinCart::BuscarXSession($shoppingC_id);
+      return ShoppinCart::BuscarXSession($shoppingC_id);
     }else {
       // si $shoppinC_id es null crea un carrito
-      return ShoppinCart::create();
+      return ShoppinCart::createCarrito();
     }
   }
 
@@ -28,7 +28,7 @@ class ShoppinCart extends Model{
     return ShoppinCart::find($shoppingC_id);
   }
 
-  public static function Create(){
+  public static function createCarrito(){
 
     $carrito = new ShoppinCart;
     $carrito->status = 'incompleted';
