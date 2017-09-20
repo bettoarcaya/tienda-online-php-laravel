@@ -8,9 +8,17 @@ class ShoppinCart extends Model{
     //
   protected $fillable = ["status"];
 
+  public function enCarrito(){
+    return $this->hasMany('App\EnCarrito');
+  }
+
+  public function products(){
+    return $this->belongsToMany('App\Producto','en_carritos');
+  }
+
   public function productSize(){
 
-    return $this->id;
+    return $this->products()->count();
   }
 
   public static function encontrarOCrearId($shoppingC_id){
