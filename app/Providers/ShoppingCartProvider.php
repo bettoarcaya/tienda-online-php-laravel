@@ -14,6 +14,7 @@ class ShoppingCartProvider extends ServiceProvider
      * @return void
      */
     public function boot(){
+      //con esto inyectamos la session en todas las vistas de nuestro proyecto
       view()->composer("*",function($view){
         $idCarrito = \Session::get('idCarrito');
         $carrito = ShoppinCart::encontrarOCrearId($idCarrito);
