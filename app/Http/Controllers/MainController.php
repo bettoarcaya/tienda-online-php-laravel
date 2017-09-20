@@ -9,7 +9,6 @@
 
   use App\Producto;
 
-  use App\ShoppinCart;
 
 
 
@@ -22,11 +21,7 @@
       # code...
         $prod = Producto::all();
 
-        $idCarrito = \Session::get('idCarrito');
-        $carrito = ShoppinCart::encontrarOCrearId($idCarrito);
-        \Session::put('idCarrito', $carrito->id);
-
-      return view('main.home')->with('productos', $prod)->with('carrito', $carrito);
+      return view('main.home')->with('productos', $prod);
     }
 
     public function editar(){

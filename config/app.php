@@ -173,6 +173,7 @@ return [
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Unisharp\Ckeditor\ServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        App\Providers\ShoppingCartProvider::class,
 
         /*
          * Application Service Providers...
