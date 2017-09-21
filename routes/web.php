@@ -24,6 +24,8 @@ Route::group(['prefix' => 'productos' , 'middleware' => 'auth'], function(){
 
 
   Route::resource('Producto','ProductsController', ['only' => ['edit','update','show','index','create','delete','destroy']]);
+
+  Route::resource('en_carritos','EnCarritoController', ['only' => ['store','destroy']]);
 });
 
 Route::get('/home', 'HomeController@index');
