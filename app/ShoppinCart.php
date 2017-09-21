@@ -13,7 +13,7 @@ class ShoppinCart extends Model{
   }
 
   public function products(){
-    return $this->belongsToMany('App\Producto','en_carritos');
+    return $this->belongsTo('App\Producto','en_carritos');
   }
 
   public function productSize(){
