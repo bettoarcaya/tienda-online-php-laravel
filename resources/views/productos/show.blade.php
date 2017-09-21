@@ -20,7 +20,8 @@
               <a class="btn btn-raised btn-danger center-block" href="{{url('/')}}">regresar</a>
             </div>
             <div class="col-md-6">
-              <a class="btn btn-raised btn-success center-block" href="">agg al carrito</a>
+              @include('productos.formCarrito',["producto" => $producto])
+              <!--<a class="btn btn-raised btn-success center-block" href="">agg al carrito</a>-->
             </div>
           </div>
         </div>
