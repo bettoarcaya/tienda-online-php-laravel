@@ -42,13 +42,19 @@ class EnCarritoController extends Controller
       $carrito = ShoppinCart::encontrarOCrearId($idCarrito);
       \Session::put('idCarrito', $carrito->id);
 
-      $enCar = new ShoppinCart;
 
-      $enCar->carrito_id = $carrito;
+      EnCarrito::create([
+        "carrito_id" => $carrito->id,
+        "products_id" => $request->Products_id
+      ]);
+
+      /*$enCar = new EnCarrito;
+
+      $enCar->carrito_id = $carrito->id;
       $enCar->products_id = $request->Products_id;
 
       $enCar->save();
-
+*/
 
       return redirect('/');
     }
