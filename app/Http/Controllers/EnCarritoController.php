@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\ShoppinCart;
+use App\EnCarrito;
+
+
 class EnCarritoController extends Controller
 {
     /**
@@ -34,11 +38,19 @@ class EnCarritoController extends Controller
      */
     public function store(Request $request){
 
-      return view('/productos');
+      $idCarrito = \Session::get('idCarrito');
+      $carrito = ShoppinCart::encontrarOCrearId($idCarrito);
+      \Session::put('idCarrito', $carrito->id);
+
+      $enCar = new ShoppinCart;
+
+      $enCar->carrito_id = $carrito;
+      $enCar->products_id = $request->Products_id;
+
+      $enCar->save();
 
 
-
-
+      return redirect('/');
     }
 
     /**

@@ -3,3 +3,5 @@
   <input class="btn btn-raised btn-success" type="submit" value="agg al carrito">
 
 {!! Form::close() !!}
+
+<!-- ,'url' => '/en_carritos' -->
