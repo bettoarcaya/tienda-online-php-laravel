@@ -47,14 +47,7 @@ class EnCarritoController extends Controller
         "carrito_id" => $carrito->id,
         "products_id" => $request->Products_id
       ]);
-
-      /*$enCar = new EnCarrito;
-
-      $enCar->carrito_id = $carrito->id;
-      $enCar->products_id = $request->Products_id;
-
-      $enCar->save();
-*/
+      //acordarse de hacer el $fillable en el modelo..
 
       return redirect('/');
     }
