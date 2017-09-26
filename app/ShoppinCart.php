@@ -16,6 +16,10 @@ class ShoppinCart extends Model{
     return $this->belongsTo('App\Producto','en_carritos');
   }
 
+  public function total(){
+    return $this->products()->sum('precio');
+  }
+
   public function productSize(){
 
     return $this->products()->count();

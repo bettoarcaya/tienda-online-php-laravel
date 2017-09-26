@@ -58,8 +58,8 @@
                         <!-- Authentication Links -->
 
                           <li>
-                            <a href="#">
-                              
+                            <a href="{{url('/carrito')}}">
+
                               <i class="glyphicon glyphicon-shopping-cart"></i>
                               <span>
                                 {{$carrito->productSize()}}

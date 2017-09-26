@@ -12,6 +12,8 @@
 */
 
 Route::get('/','MainController@home');
+Route::get('/carrito','CarritoController@index');
+
 Route::resource('/show', 'ProductsController@show');
 
 Route::group(['prefix' => 'productos' , 'middleware' => 'auth'], function(){
