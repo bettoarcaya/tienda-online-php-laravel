@@ -14,6 +14,7 @@ class CarritoController extends Controller{
     \Session::put('idCarrito', $carrito->id);
 
     $productos = $carrito->products()->get();
+    //obtenemos los datos en forma de arreglo gracias al metodo get.
 
     $total = $carrito->total();
 
