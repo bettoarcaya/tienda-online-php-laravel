@@ -17,11 +17,11 @@
         </tr>
       </thead>
       <tbody>
-        @foreach ($productos as $element)
+        @foreach ($productos as $elemento)
           <tr>
-            <td>{{$element->title}}</td>
-            <td>{{$element->description}}</td>
-            <td>{{$element->precio}}</td>
+            <td>{{$elemento->title}}</td>
+            <td>{{$elemento->description}}</td>
+            <td>{{$elemento->precio}}</td>
           </tr>
         @endforeach
 

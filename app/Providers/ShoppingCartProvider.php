@@ -20,7 +20,8 @@ class ShoppingCartProvider extends ServiceProvider
         $carrito = ShoppinCart::encontrarOCrearId($idCarrito);
         \Session::put('idCarrito', $carrito->id);
 
-        $view->with("carrito",$carrito);
+
+        $view->with("cantidad", $carrito->productSize());
       });
     }
 

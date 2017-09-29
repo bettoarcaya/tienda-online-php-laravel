@@ -61,9 +61,7 @@
                             <a href="{{url('/carrito')}}">
 
                               <i class="glyphicon glyphicon-shopping-cart"></i>
-                              <span>
-                                {{$carrito->productSize()}}
-                              </span>
+                              {{$cantidad}}
                             </a>
 
                           </li>
