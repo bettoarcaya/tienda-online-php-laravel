@@ -17,6 +17,7 @@
         </tr>
       </thead>
       <tbody>
+
         @foreach ($productos as $elemento)
           <tr>
             <td>{{$elemento->title}}</td>
@@ -26,8 +27,8 @@
         @endforeach
 
         <tr>
-          <td>total</td>
-          <td>{{$total}}</td>
+          <td>Total</td>
+          <td>{{$total}}.00</td>
         </tr>
 
       </tbody>

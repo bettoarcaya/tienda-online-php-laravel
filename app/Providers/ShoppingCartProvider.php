@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\ShoppinCart;
+use App\EnCarrito;
 
 
 class ShoppingCartProvider extends ServiceProvider
@@ -18,10 +19,14 @@ class ShoppingCartProvider extends ServiceProvider
       view()->composer("*",function($view){
         $idCarrito = \Session::get('idCarrito');
         $carrito = ShoppinCart::encontrarOCrearId($idCarrito);
-        \Session::put('idCarrito', $carrito->id);
+      \Session::put('idCarrito', $carrito->id);
+
+      $cantidad = new EnCarrito;
 
 
-        $view->with("cantidad", $carrito->productSize());
+        //$view->with("cantidad", $carrito->productSize());
+        $view->with("cantidad", $cantidad->obtenerCantProduct());
+
       });
     }
 
