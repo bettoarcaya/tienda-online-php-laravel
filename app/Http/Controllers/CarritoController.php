@@ -25,6 +25,7 @@ class CarritoController extends Controller{
 
     //$total = $carrito->total();
     */
+    
     $total = 0;
     $carrito = EnCarrito::all();
     $arreglo = array();
