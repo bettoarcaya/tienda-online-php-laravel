@@ -14,9 +14,7 @@ class CarritoController extends Controller{
     /*
     Usando Variables de Session (otra forma)...
     $idCarrito = \Session::get('idCarrito');
-    //dd($idCarrito);
     $carrito = ShoppinCart::encontrarOCrearId($idCarrito);
-    //dd($carrito);
 
   \Session::put('idCarrito', $carrito->id);
 
@@ -25,7 +23,7 @@ class CarritoController extends Controller{
 
     //$total = $carrito->total();
     */
-    
+
     $total = 0;
     $carrito = EnCarrito::all();
     $arreglo = array();
@@ -36,7 +34,6 @@ class CarritoController extends Controller{
       $total += $productos->precio;
     }
 
-    //dd($arr);
     return view('productos.carrito')->with('productos', $arreglo)->with('total', $total);
   }
 
